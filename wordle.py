@@ -15,9 +15,9 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = {'d','i','e','u'}
-    correct_letters = ['w','','','c','']
-    letters_contained = {'a','c','w','h'}
+    nonletters = {'r','e','m','p','s','c','l'}
+    correct_letters = ['','','a','c','k']
+    letters_contained = {'a','c','k'}
     new_words = []
     y_words = []
     z_words = []
@@ -40,7 +40,6 @@ def find_word(words):
 
 
 
-
     for y_word in y_words:
         intersection = set.intersection(letters_contained, set(y_word))
         if len(intersection) == len(letters_contained):
@@ -54,6 +53,7 @@ def find_word(words):
     for i in z_words:
         if i not in final_word:
             final_word.append(i)
+
     return final_word[0]
 
 print(find_word(all_possible_words()))
