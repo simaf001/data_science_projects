@@ -15,9 +15,9 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = {'s','e','n','t'}
-    correct_letters = ['','h','a','','k']
-    letters_contained = {'a','h','k'}
+    nonletters = {'a','d','i','u','x','t','c','h','o','w','s','m'}
+    correct_letters = ['p','e','','','']
+    letters_contained = {'r','e','p'}
     new_words = []
     y_words = []
     z_words = []
