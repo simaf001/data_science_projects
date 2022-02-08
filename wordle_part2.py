@@ -15,46 +15,33 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = {'b','r','k','e','w'}
-    correct_letters = ['t','','','','']
-    letters_contained = {'t','a'}
-    new_words = []
-    y_words = []
-    z_words = []
-    final_word = []
-    for i in range(len(words)):
-        intersection = set.intersection(nonletters, set(words[i]))
-        if len(intersection) == 0:
-            new_words.append(words[i])
-        #for char in nonletters:
-            #if char in words[i]:
-            #    new_words.append(words[i])
+    nonletters = "aiyo"
+    correct_letters = ["","","","",""]
+    letters_contained = "drl"
+    final_words = []
+    for i in words:
 
-    for i in new_words:
+        z = [char for char in i]
 
-        for j in i:
+        for k in [char for char in letters_contained]:
+            if k not in z:
+                break
+        else:
 
-            for char in correct_letters:
-                if char == j:
-                    y_words.append(i)
+            for j in z:
+                if j in nonletters:
+                    break
+
+            else:
+                for j in range(len(correct_letters)):
+                    if not correct_letters[j] == "":
+                        if not z[j] == correct_letters[j]:
+                            break
+                else:
+                    final_words.append(i)
 
 
-
-    for y_word in y_words:
-        intersection = set.intersection(letters_contained, set(y_word))
-        if len(intersection) == len(letters_contained):
-        #for char in letters_contained:
-            #if char in y_word:
-            z_words.append(y_word)
-
-        #if letters_contained in y_word:
-
-        #    z_words.append(y_words[i])
-    for i in z_words:
-        if i not in final_word:
-            final_word.append(i)
-
-    return final_word[0]
+    return final_words[0]
 
 
 if __name__=="__main__":
