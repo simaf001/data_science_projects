@@ -15,9 +15,9 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = "aiyo"
-    correct_letters = ["","","","",""]
-    letters_contained = "drl"
+    nonletters = "innhomacyu"
+    correct_letters = ["","","d","e","r"]
+    letters_contained = "d"
     final_words = []
     for i in words:
 
