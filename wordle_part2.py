@@ -15,10 +15,10 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = "snortwh"
-    correct_letters = ["","","","","k"]
-    misplaced_correct_letters = ["","","a","c",""]
-    letters_contained = "ac"
+    nonletters = "manoscfbwlikv"
+    correct_letters = ["","r","","","e"]
+    misplaced_correct_letters = ["","","","r","rd"]
+    letters_contained = "rd"
     final_words = []
     for i in words:
 
