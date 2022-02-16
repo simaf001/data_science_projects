@@ -15,9 +15,10 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = "innhomacyu"
-    correct_letters = ["","","d","e","r"]
-    letters_contained = "d"
+    nonletters = "snortwh"
+    correct_letters = ["","","","","k"]
+    misplaced_correct_letters = ["","","a","c",""]
+    letters_contained = "ac"
     final_words = []
     for i in words:
 
@@ -38,7 +39,13 @@ def find_word(words):
                         if not z[j] == correct_letters[j]:
                             break
                 else:
-                    final_words.append(i)
+                    for k in range(len(misplaced_correct_letters)):
+                        if not misplaced_correct_letters[k] == "":
+                            if z[k] == misplaced_correct_letters[k]:
+                                break
+
+                    else:
+                        final_words.append(i)
 
 
     return final_words[0]
