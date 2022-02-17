@@ -15,10 +15,10 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = "manoscfbwlikv"
-    correct_letters = ["","r","","","e"]
-    misplaced_correct_letters = ["","","","r","rd"]
-    letters_contained = "rd"
+    nonletters = "prde"
+    correct_letters = ["","","u","",""]
+    misplaced_correct_letters = ["","","","",""]
+    letters_contained = ""
     final_words = []
     for i in words:
 
@@ -50,6 +50,7 @@ def find_word(words):
 
     return final_words[0]
 
+def wordle_solver(word, )
 
 if __name__=="__main__":
     print(find_word(all_possible_words()))
