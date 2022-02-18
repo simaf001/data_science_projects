@@ -15,10 +15,10 @@ def all_possible_words(f="possiblewords.txt"):
 
 def find_word(words):
 
-    nonletters = "shootbraceugndv"
-    correct_letters = ["","","","l","y"]
-    misplaced_correct_letters = ["p","l","l","im",""]
-    letters_contained = "plim"
+    nonletters = "thumbliacswpr"
+    correct_letters = ["","o","","",""]
+    misplaced_correct_letters = ["","","go","oe",""]
+    letters_contained = "ge"
     final_words = []
     for i in words:
 
@@ -41,7 +41,7 @@ def find_word(words):
                 else:
                     for k in range(len(misplaced_correct_letters)):
                         if not misplaced_correct_letters[k] == "":
-                            if z[k] == misplaced_correct_letters[k]:
+                            if z[k] in misplaced_correct_letters[k]:
                                 break
 
                     else:
